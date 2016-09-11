@@ -1,0 +1,1 @@
+# Demo application of using nativescript-webview-interface plugin with Angular 2

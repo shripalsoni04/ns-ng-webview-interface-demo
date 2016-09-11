@@ -1,0 +1,51 @@
+<StackLayout class="container">
+  <Label 
+      text="WebView" 
+      class="heading-main">
+  </Label>
+  
+  <GridLayout 
+      rows="50" 
+      columns="*">
+    <web-view #webView></web-view>    
+  </GridLayout>
+  <Label 
+      text="Native" 
+      class="heading-main">
+  </Label>
+  <GridLayout 
+      rows="50" 
+      columns="*, 70">
+    <TextField 
+        #txtLanguage 
+        col="0" 
+        hint="Language">
+    </TextField>
+    <Button 
+        col="1" 
+        text="Add" 
+        (tap)="addLanguage(txtLanguage.text)">
+    </Button>
+  </GridLayout>
+
+  <Label 
+      text="Selected Language In Webview:" 
+      textWrap="true" 
+      class="heading-sub">
+  </Label>
+  <Label 
+      text="{{selectedLanguage}}" 
+      textWrap="true" 
+      style="padding: 5 0 20;">
+  </Label> 
+  <Button 
+      text="Selected Language" 
+      (tap)="getSelectedLanguage()" 
+      class="actionBtn">
+  </Button>
+  <Button 
+      text="Selected Language Deferred By 2s" 
+      (tap)="getSelectedLanguageDeferred()" 
+      class="actionBtn">
+  </Button>
+</StackLayout>
