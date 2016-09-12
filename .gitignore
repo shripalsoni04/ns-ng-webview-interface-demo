@@ -3,5 +3,6 @@ app/*.js
 app/*.js.map
 hooks
 lib
+!app/www/lib
 node_modules
 platforms
